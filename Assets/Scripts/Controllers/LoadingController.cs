@@ -7,7 +7,6 @@ using UnityEngine.UI;
 public class LoadingController : MonoBehaviour
 {
     // 로딩창 컨트롤러
-    
     [SerializeField]
     Image _progressBar;
     AsyncOperation _op; 

@@ -13,14 +13,10 @@ public class Define
         Dead,
         None,
     }
-/*    public enum Scene
+
+    public enum JoystickState
     {
-        TestSceneOne,
-        TestSceneTwo,
-        Unknown,
-        Lobby,
-        CharacterSelect,
-        PetSelect,
-        Game,
-    }*/
+        InputFalse,
+        InputTrue,
+    }
 }

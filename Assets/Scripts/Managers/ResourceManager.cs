@@ -4,40 +4,85 @@ using UnityEngine;
 
 public class ResourceManager 
 {
-    public T Load<T>(string path) where T : Object
+    public List<GameObject> _player;
+    public List<GameObject> _monster;
+    public List<GameObject> _npc;
+    public List<GameObject> _ui;
+
+    // Start is called before the first frame update
+    public void Init()
     {
-        return Resources.Load<T>(path);
+        _player = new List<GameObject>();
+        _monster = new List<GameObject>();
+        _npc = new List<GameObject>();
+        _ui = new List<GameObject>();
+
+        GameObject[] player = Resources.LoadAll<GameObject>("Prefabs/Character_Prefab/");
+        GameObject[] monster = Resources.LoadAll<GameObject>("Prefabs/Monster_Prefab/");
+        GameObject[] npc = Resources.LoadAll<GameObject>("Prefabs/Npc_Prefab/");
+        GameObject[] ui = Resources.LoadAll<GameObject>("Prefabs/Ui_Prefab/");
+
+        ListAdd(_player, player);
+        ListAdd(_monster, monster);
+        ListAdd(_npc, npc);
+        ListAdd(_ui, ui);
     }
 
-    public GameObject Instantiate(string path, Transform parent = null)
+    public void ListAdd(List<GameObject> go, GameObject[] loadList)
     {
-        // 메모리상 로드
-        GameObject prefab = Load<GameObject>($"Prefabs/{path}");
-        if(prefab == null)
+        foreach (GameObject one in loadList)
         {
-            Debug.Log($"Failed to load prefab : {path}");
-            return null;
+            go.Add(one);
         }
-        // 메모리에 로드된 프리팹을 씬에 불러옴
-        GameObject go = Object.Instantiate(prefab, parent);
-        int index = go.name.IndexOf("(Clone)");
-        if(index > 0)
-            go.name = go.name.Substring(0, index);
-        return go;
     }
 
-    public void Destroy(GameObject go)
+    public GameObject GetCharacter(string playerName)
     {
-        if(go == null)
-            return;
-        Object.Destroy(go);
+        foreach (GameObject one in _player)
+        {
+            if (one.name.Equals(playerName))
+            {
+                return one;
+            }
+        }
+        return null;
     }
 
-    //몇초후 파괴
-    public void Destroy(GameObject go, float time)
+    public GameObject GetNpc(string monsterName)
     {
-        if(go == null)
-            return;
-        Object.Destroy(go, time);
+        foreach (GameObject one in _monster)
+        {
+            if (one.name.Equals(monsterName))
+            {
+                return one;
+            }
+
+        }
+        return null;
+    }
+    public GameObject GetMonster(string npcName)
+    {
+        foreach (GameObject one in _monster)
+        {
+            if (one.name.Equals(npcName))
+            {
+                return one;
+            }
+
+        }
+        return null;
+    }
+
+    public GameObject GetUi(string uiName)
+    {
+        foreach (GameObject one in _ui)
+        {
+            if (one.name.Equals(uiName))
+            {
+                return one;
+            }
+
+        }
+        return null;
     }
 }
