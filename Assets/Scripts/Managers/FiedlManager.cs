@@ -1,14 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameStart : MonoBehaviour
+public class FiedlManager : MonoBehaviour
 {
-    public void StartBtn()
+    private void Awake()
     {
-        //SceneManager.LoadScene("LoadingScene");
-        GameManager.Scene.LoadScene("CharacterSelectScene");
+        // 게임매니저에서 Resource매니저/Ui매니저 Init(Awake 함수 대체)
+        GameManager.Resource.Init();
+        GameManager.Ui.Init();
     }
     // Start is called before the first frame update
     void Start()
