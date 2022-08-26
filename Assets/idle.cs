@@ -17,7 +17,6 @@ public class idle : StateMachineBehaviour
         // 이동상태로 변경
         if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
         {
-            //테스트용 주석
             animator.SetInteger("playerStat", 1);    
         } 
         // 공격상태로 변경
