@@ -56,7 +56,6 @@ public class ResourceManager
             {
                 return one;
             }
-
         }
         return null;
     }
@@ -68,7 +67,6 @@ public class ResourceManager
             {
                 return one;
             }
-
         }
         return null;
     }
@@ -81,7 +79,6 @@ public class ResourceManager
             {
                 return one;
             }
-
         }
         return null;
     }
