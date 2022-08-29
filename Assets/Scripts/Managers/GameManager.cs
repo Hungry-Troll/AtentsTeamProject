@@ -25,9 +25,7 @@ public class GameManager : MonoBehaviour
     ResourceManager _resource = new ResourceManager();
     SceneManagerEX _scene = new SceneManagerEX();
     UiManager _ui = new UiManager();
-    // 
-    List<MonsterController> mobList;
-    public Transform mobParent;
+    //
     public static ResourceManager Resource 
     { 
         get{ return _instance._resource; } 
