@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
     private void Move()
     {
         _inputDir = GameManager.Ui._joyStickController.inputDirection;
-        Debug.Log("플레이어 : " + _inputDir);
+        //Debug.Log("플레이어 : " + _inputDir);
         bool isMove = _inputDir.magnitude != 0;
         //if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
         if(isMove)
