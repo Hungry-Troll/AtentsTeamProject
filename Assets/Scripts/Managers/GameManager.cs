@@ -41,7 +41,6 @@ public class GameManager : MonoBehaviour
         get { return _instance._ui; } 
     }
 
-    float currTime;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -58,50 +57,7 @@ public class GameManager : MonoBehaviour
         // 게임매니저에서 Resource매니저/Ui매니저 Init(Awake 함수 대체)
         GameManager.Resource.Init();
         GameManager.Ui.Init();
-        mobList = new List<MonsterController>();
-    }
-    void Start()
-    {
-        Mobspwan();
-    }
-
-    void Update()
-    {
-    }
-    public void Mobspwan()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            Vector3 rayPos = Vector3.zero;
-            float x = Random.Range(-15, 15);
-            float z = Random.Range(-20, 0);
-            rayPos.Set(x, 0, z);
-            CreateMonster(rayPos, "Velociraptor");
-        }
-    }
-    public MonsterController CreateMonster(Vector3 _origin, string _name) 
-    {
-        Vector3? terrainPos = GetTerrainPosition(_origin);
-        if(terrainPos.HasValue)
-        {
-            GameObject rcCha = _instance._resource.GetMonster(_name);
-            GameObject obj = GameObject.Instantiate<GameObject>(rcCha, terrainPos.Value, Quaternion.identity);
-            obj.transform.SetParent(mobParent); 
-            MonsterController script = obj.AddComponent <MonsterController> ();
-            mobList.Add(script);
-            return script;
-        }
-        return null;
-    }
-    public Vector3? GetTerrainPosition(Vector3 _origin) //교차된 맵의 위치를 반환
-    {
-        _origin.y += 100f;
-        RaycastHit hit;
-        if(Physics.Raycast(_origin, -Vector3.up, out hit, Mathf.Infinity))
-        {
-            return hit.point;
-        }
-        return null;
+        
 =======
 >>>>>>> origin/master
     }
