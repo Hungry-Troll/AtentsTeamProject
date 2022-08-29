@@ -8,13 +8,20 @@ public class _Pet_01 : MonoBehaviour
     Animator animator;                                          
     Vector3 targetPos;                                          
     public float moveSpeed;                                      
-    public float rotSpeed;           
-    
+    public float rotSpeed;
+    Transform target;
+    float distance;
+
+    public GameObject player; 
+
+
+
     void Start()
     {
-        animator = GetComponent<Animator>();                   
+        animator = GetComponent<Animator>();
+        target = GameObject.FindGameObjectWithTag("Monster").transform;
+        
     }
-
 
 
     void Update()
@@ -33,19 +40,31 @@ public class _Pet_01 : MonoBehaviour
                 }
             }
         }
+
         Debug.Log($"{targetPos} // {transform.position}");
-        
-        if (targetPos != transform.position)     
+
+        distance = Vector3.Distance(target.transform.position, targetPos);
+        Debug.Log(distance);
+
+        Vector3 dis = target.transform.position - targetPos;
+        Debug.Log(dis);
+
+        //애니메이션 코드
+        if (distance <= 3f)
         {
-            animator.SetInteger("aniIndex", 1);
+            Debug.Log("공격");
+            transform.LookAt(target.transform);
+            animator.SetInteger("aniIndex", 2);
         }
         else if (targetPos == transform.position)
         {
             animator.SetInteger("aniIndex", 0);
         }
-
-
-
+        else if (targetPos != transform.position)
+        {
+            animator.SetInteger("aniIndex", 1);
+            
+        }
 
         //이동코드 
         transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * moveSpeed);          
@@ -55,6 +74,10 @@ public class _Pet_01 : MonoBehaviour
         Vector3 newDir = Vector3.RotateTowards(transform.forward, dir.normalized, Time.deltaTime * rotSpeed, 0);
         transform.rotation = Quaternion.LookRotation(newDir.normalized);                   
 
+    }
+
+    void FollowPlayer()
+    {
 
     }
 }
