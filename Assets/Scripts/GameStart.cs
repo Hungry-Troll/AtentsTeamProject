@@ -7,7 +7,8 @@ public class GameStart : MonoBehaviour
 {
     public void StartBtn()
     {
-        SceneManager.LoadScene("LoadingScene");
+        //SceneManager.LoadScene("LoadingScene");
+        GameManager.Scene.LoadScene("CharacterSelectScene");
     }
     // Start is called before the first frame update
     void Start()
