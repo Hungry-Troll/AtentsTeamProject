@@ -6,7 +6,7 @@ using UnityEngine.UI;
 // SceneManagement : 씬 전환을 위한 것
 using UnityEngine.SceneManagement;
 
-public class TurnOnTheStage : MonoBehaviour
+public class TurnOnTheStage_Pet : MonoBehaviour
 {
     private List<Animator> _animatorList;
     public Animator _pet1Ani;
@@ -17,8 +17,8 @@ public class TurnOnTheStage : MonoBehaviour
     private Quaternion _turn = Quaternion.identity;
     
     // 정의
-    public static int charactorNum = 0;
-    int value = 0;
+    public static int _characterNum = 0;
+    int _value = 0;
 
     private void Awake()
     {
@@ -33,7 +33,7 @@ public class TurnOnTheStage : MonoBehaviour
     private void Start()
     {
         // 각을 초기화합니다.
-        _turn.eulerAngles = new Vector3(0, value, 0);
+        _turn.eulerAngles = new Vector3(0, _value, 0);
     }
 
     // Update is called once per frame
@@ -42,18 +42,18 @@ public class TurnOnTheStage : MonoBehaviour
         if(_bTurnLeft)
         {
             Debug.Log("Left");
-            charactorNum++;
+            _characterNum++;
 
             // 수정 4 -> 3
-            if(charactorNum == 3)
+            if(_characterNum == 3)
             {
-                charactorNum = 0;
+                _characterNum = 0;
             }
 
             // 선택한 펫만 움직이도록 나머지는 애니메이션 off
             for(int i = 0; i < _animatorList.Count; i++)
             {
-                if(i == charactorNum)
+                if(i == _characterNum)
                 {
                     continue;
                 }
@@ -62,7 +62,7 @@ public class TurnOnTheStage : MonoBehaviour
 
             // 수정 -> 120
             // 각도를 90도 뺍니다.
-            value -= 120;
+            _value -= 120;
 
             // 부울 변수를 취소합니다.
             _bTurnLeft = false;
@@ -71,24 +71,24 @@ public class TurnOnTheStage : MonoBehaviour
         if(_bTurnRight)
         {
             Debug.Log("Right");
-            charactorNum--;
+            _characterNum--;
 
-            if(charactorNum == -1)
+            if(_characterNum == -1)
             {
                 // 수정 3 -> 2
-                charactorNum = 2;
+                _characterNum = 2;
             }
             
             // 수정 -> 120
             // 각도를 90도 더합니다.
-            value += 120;
+            _value += 120;
 
             // 부울 변수를 취소합니다.
             _bTurnRight = false;
         }
         
         // 각도를 잽니다.
-        _turn.eulerAngles = new Vector3(0, value, 0);
+        _turn.eulerAngles = new Vector3(0, _value, 0);
         
         // 돌립니다.
         transform.rotation = Quaternion.Slerp(transform.rotation, _turn, Time.deltaTime * 5.0f);
