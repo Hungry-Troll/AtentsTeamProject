@@ -57,5 +57,8 @@ public class GameManager : MonoBehaviour
         GameManager.Ui.Init();
         
     }
+
+    void Test3()
+    { }
 }
 
