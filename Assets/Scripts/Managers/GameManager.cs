@@ -38,7 +38,7 @@ public class GameManager : MonoBehaviour
     { 
         get { return _instance._ui; } 
     }
-
+    //
     // Start is called before the first frame update
     private void Awake()
     {
