@@ -29,15 +29,15 @@ public class UiDesign3 : MonoBehaviour
         if(WButtom)
         {
             Debug.Log("Warrior");
-<<<<<<< HEAD
+
             job = Resources.Load<GameObject>("PeoplePrefabs/man-viking");
             playerObject = GameObject.Instantiate<GameObject>(job);
             playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-=======
+
             jobName.text = "전사";
             jobInformation.text = "근접전투 스타일에 밸런스형이 특징";
             characterGeneration("viking");
->>>>>>> origin/master
+
             WButtom = false;
         }
 
