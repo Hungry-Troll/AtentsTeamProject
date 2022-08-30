@@ -60,5 +60,11 @@ public class GameManager : MonoBehaviour
 
     void Test3()
     { }
+
+    void Test2()
+    {
+        int num2 = 100;
+        int num3 = 1000;
+    }
 }
 
