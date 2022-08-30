@@ -29,7 +29,6 @@ public class UiDesign3 : MonoBehaviour
             job = Resources.Load<GameObject>("PeoplePrefabs/man-viking");
             playerObject = GameObject.Instantiate<GameObject>(job);
             playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
-            sr.material.color = new Color(1f, 1f, 1f, 1f);
             WButtom = false;
         }
 
