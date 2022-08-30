@@ -57,5 +57,10 @@ public class GameManager : MonoBehaviour
         GameManager.Ui.Init();
         
     }
+    private void Test1()
+    {
+        int num = 99;
+    }
+
 }
 
