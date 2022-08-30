@@ -48,7 +48,7 @@ public class ResourceManager
         return null;
     }
 
-    public GameObject GetNpc(string monsterName)
+    public GameObject GetMonster(string monsterName)
     {
         foreach (GameObject one in _monster)
         {
@@ -59,9 +59,9 @@ public class ResourceManager
         }
         return null;
     }
-    public GameObject GetMonster(string npcName)
+    public GameObject GetNpc(string npcName)
     {
-        foreach (GameObject one in _monster)
+        foreach (GameObject one in _npc)
         {
             if (one.name.Equals(npcName))
             {

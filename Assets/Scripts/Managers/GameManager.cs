@@ -25,8 +25,7 @@ public class GameManager : MonoBehaviour
     ResourceManager _resource = new ResourceManager();
     SceneManagerEX _scene = new SceneManagerEX();
     UiManager _ui = new UiManager();
-
-    // 
+    //
     public static ResourceManager Resource 
     { 
         get{ return _instance._resource; } 
@@ -39,7 +38,7 @@ public class GameManager : MonoBehaviour
     { 
         get { return _instance._ui; } 
     }
-
+    //
     // Start is called before the first frame update
     private void Awake()
     {
@@ -52,6 +51,19 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e50283481c25aef1da488f2d4b8a7cde0e22ea16
+        // 게임매니저에서 Resource매니저/Ui매니저 Init(Awake 함수 대체)
+        GameManager.Resource.Init();
+        GameManager.Ui.Init();
+        
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> origin/master
+>>>>>>> e50283481c25aef1da488f2d4b8a7cde0e22ea16
     }
 }
 
