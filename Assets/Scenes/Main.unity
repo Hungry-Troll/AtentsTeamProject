@@ -593,7 +593,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
-<<<<<<< HEAD
 --- !u!1 &1202377124
 GameObject:
   m_ObjectHideFlags: 0
@@ -639,8 +638,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mobParent: {fileID: 0}
-=======
->>>>>>> origin/master
 --- !u!1 &1290513260
 GameObject:
   m_ObjectHideFlags: 0
