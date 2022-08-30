@@ -1,10 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiDesign3 : MonoBehaviour
 {
     public GameObject warriorB;
     public GameObject ArcherB;
     public GameObject ScientistB;
+
+    public Text jobName;
+    public Text jobInformation;
 
     SpriteRenderer sr;
 
@@ -19,38 +23,54 @@ public class UiDesign3 : MonoBehaviour
     {
         sr = warriorB.GetComponent<SpriteRenderer>();
     }
-
-    // Update is called once per frame
+    //소슽트리 확인용
     void Update()
     {
         if(WButtom)
         {
             Debug.Log("Warrior");
+<<<<<<< HEAD
             job = Resources.Load<GameObject>("PeoplePrefabs/man-viking");
             playerObject = GameObject.Instantiate<GameObject>(job);
             playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+=======
+            jobName.text = "전사";
+            jobInformation.text = "근접전투 스타일에 밸런스형이 특징";
+            characterGeneration("viking");
+>>>>>>> origin/master
             WButtom = false;
         }
 
         if(AButtom)
         {
             Debug.Log("Archer");
-            job = Resources.Load<GameObject>("PeoplePrefabs/man-soldier");
-            playerObject = GameObject.Instantiate<GameObject>(job);
-            playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            jobName.text = "궁수";
+            jobInformation.text = "원거리전투 스타일에 폭발적인 데미지가 특징";
+            characterGeneration("soldier");
             AButtom = false;
         }
 
         if(SButtom)
         {
             Debug.Log("Scientist");
-            job = Resources.Load<GameObject>("PeoplePrefabs/man-doctor");
-            playerObject = GameObject.Instantiate<GameObject>(job);
-            playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
+            jobName.text = "과학자";
+            jobInformation.text = "원기리전투 스타일에 전략형이 특징";
+            characterGeneration("doctor");
             SButtom = false;
         }
 
 
+    }
+    
+    void characterGeneration(string _name)
+    {
+        if (playerObject != null)
+        {
+            Destroy(playerObject);
+        }
+        job = Resources.Load<GameObject>("PeoplePrefabs/man-" + _name);
+        playerObject = GameObject.Instantiate<GameObject>(job);
+        playerObject.transform.rotation = Quaternion.Euler(0f, 180f, 0f);
     }
 
     public void WarriorButtom()

@@ -64,7 +64,7 @@ public class JoyStickController : MonoBehaviour, IBeginDragHandler, IDragHandler
     public Vector2 InputControlVector()
     {
         _joystickState = JoystickState.InputTrue;
-        Debug.Log("¡∂¿ÃΩ∫∆Ω : " + inputDirection);
+       // Debug.Log("¡∂¿ÃΩ∫∆Ω : " + inputDirection);
         return inputDirection;
     }
 

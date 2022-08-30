@@ -19,4 +19,10 @@ public class Define
         InputFalse,
         InputTrue,
     }
+
+    public enum Info
+    {
+        Hp,
+        Mp,
+    }
 }
