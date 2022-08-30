@@ -23,7 +23,7 @@ public class UiDesign3 : MonoBehaviour
     {
         sr = warriorB.GetComponent<SpriteRenderer>();
     }
-    //소슽트리 확인용
+    //소스트리 확인용
     void Update()
     {
         if(WButtom)
