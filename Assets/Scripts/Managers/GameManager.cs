@@ -53,18 +53,7 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
 
         // 게임매니저에서 Resource매니저/Ui매니저 Init(Awake 함수 대체)
-        GameManager.Resource.Init();
-        GameManager.Ui.Init();
-        
-    }
-
-    void Test3()
-    { }
-
-    void Test2()
-    {
-        int num2 = 100;
-        int num3 = 1000;
+        GameManager.Resource.Init();  
     }
 }
 

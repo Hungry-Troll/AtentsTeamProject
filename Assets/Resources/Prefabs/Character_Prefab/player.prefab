@@ -841,8 +841,8 @@ GameObject:
   - component: {fileID: 8893156655686052399}
   - component: {fileID: 8965034905334262214}
   m_Layer: 0
-  m_Name: man-soldier-special-ge_Rig
-  m_TagString: Untagged
+  m_Name: player
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -874,7 +874,7 @@ Animator:
   m_GameObject: {fileID: 8893156655693306355}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8b1b4739ce8b8d34883671801e4919fd, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

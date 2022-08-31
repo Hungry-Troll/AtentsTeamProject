@@ -4,7 +4,7 @@
 #
 Library/
 Temp/
-Oobj/
+obj/
 Build/
 Builds/
 Logs/

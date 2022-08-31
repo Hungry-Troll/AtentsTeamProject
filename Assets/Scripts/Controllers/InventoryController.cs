@@ -7,15 +7,15 @@ public class InventoryController : MonoBehaviour, IDragHandler, IBeginDragHandle
 {
     public void OnBeginDrag(PointerEventData eventData)
     {
+        // 드래그 시작
         transform.position = eventData.position;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
+        // 드래그 중
         transform.position = eventData.position;
-        Debug.Log("OnDrag");
     }
-
 
     public void CloseInventory()
     {
