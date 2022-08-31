@@ -111,6 +111,7 @@ public class TurnOnTheStage_Pet : MonoBehaviour
     public void TurnStage()
     {
         // 스테이지 전환을 위한 함수
-        SceneManager.LoadScene("OnTheStage");
+        // SceneManager.LoadScene("OnTheStage");
+        GameManager.Scene.LoadScene("Main");
     }
 }

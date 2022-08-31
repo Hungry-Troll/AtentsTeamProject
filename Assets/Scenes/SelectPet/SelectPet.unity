@@ -662,7 +662,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 82ed1c44dfbe4c04e9fd82e1905b6738, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 195542565619478750, guid: fff67418a15dc1b4cb79a5ba25b4902a, type: 3}
+    - {fileID: 114248188386761042, guid: fff67418a15dc1b4cb79a5ba25b4902a, type: 3}
+    - {fileID: 143783827643111250, guid: fff67418a15dc1b4cb79a5ba25b4902a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: fff67418a15dc1b4cb79a5ba25b4902a, type: 3}
 --- !u!4 &402684659 stripped
 Transform:
@@ -1144,7 +1147,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dfc470c73f853e7499a2c02efd98e1f6, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114346699610916894, guid: 66c4d78bbe13d4777bd10575c3a8c680, type: 3}
+    - {fileID: 195363539340491064, guid: 66c4d78bbe13d4777bd10575c3a8c680, type: 3}
+    - {fileID: 143702363733386136, guid: 66c4d78bbe13d4777bd10575c3a8c680, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 66c4d78bbe13d4777bd10575c3a8c680, type: 3}
 --- !u!4 &692301513 stripped
 Transform:
@@ -2107,7 +2113,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pachycephalosaurus
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8594066658684612912, guid: 71ec8a13f23e7d84695599f4554d8c8b, type: 3}
+    - {fileID: 8594066658684612913, guid: 71ec8a13f23e7d84695599f4554d8c8b, type: 3}
+    - {fileID: 8594066658684612919, guid: 71ec8a13f23e7d84695599f4554d8c8b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71ec8a13f23e7d84695599f4554d8c8b, type: 3}
 --- !u!4 &1672389796 stripped
 Transform:
