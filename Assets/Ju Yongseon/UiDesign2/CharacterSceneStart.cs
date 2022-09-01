@@ -6,6 +6,6 @@ public class CharacterSceneStart : MonoBehaviour
 {
     public void OnStartButton()
     {
-        GameManager.Scene.LoadScene("SelectPet");
+        GameManager.Scene.LoadScene("Main");
     }
 }
