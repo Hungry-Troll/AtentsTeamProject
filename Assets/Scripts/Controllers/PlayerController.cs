@@ -39,4 +39,18 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(tempDir.normalized);
         }
     }
+
+    private float PlayerYposCheck()
+    {
+        float temp = 0.0f;
+        Vector3 origin = transform.position;
+        origin.y += 100f;
+        RaycastHit hit;
+        if (Physics.Raycast(origin, -Vector3.up, out hit, Mathf.Infinity))
+        {
+            temp = hit.point.y;
+            return temp;
+        }
+        return temp;
+    }
 }

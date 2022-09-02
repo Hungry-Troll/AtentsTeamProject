@@ -5,6 +5,9 @@ using UnityEngine;
 public class FieldManager : MonoBehaviour
 {
     PlayerController _player;
+    public GameObject _startPosObject;
+    public Vector3 _startPos;
+
     private void Awake()
     {
         // 게임매니저에서 Ui매니저 Init(Awake 함수 대체)
@@ -12,7 +15,9 @@ public class FieldManager : MonoBehaviour
         GameManager.Ui.Init();
         // 플레이어 캐릭터 생성
         // 추후 플레이어 선택창에서 string 으로 이름만 받아오면 됨
-        CreatePlayerCharacter(new Vector3(0, 0, 0), "player");
+        // 시작위치는 맵마다 다르게 해야 됨
+        _startPos = _startPosObject.transform.position;
+        CreatePlayerCharacter(_startPos, "player");
     }
     // Start is called before the first frame update
     void Start()
