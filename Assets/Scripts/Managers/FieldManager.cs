@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class FieldManager : MonoBehaviour
 {
+    //게임 시작시 Awake , Start, Update 사용 용도 매니저
     PlayerController _player;
+    _Pet_01 _pet;
     public GameObject _startPosObject;
     public Vector3 _startPos;
 
@@ -17,7 +19,9 @@ public class FieldManager : MonoBehaviour
         // 추후 플레이어 선택창에서 string 으로 이름만 받아오면 됨
         // 시작위치는 맵마다 다르게 해야 됨
         _startPos = _startPosObject.transform.position;
-        CreatePlayerCharacter(_startPos, "player");
+        //Obj매니저에서 플레이어스크립트를 들고있게함
+        GameManager.Obj._playerController = CreatePlayerCharacter(_startPos, "player");
+        CreatePet(_startPos, "Fox");
     }
     // Start is called before the first frame update
     void Start()
@@ -31,7 +35,7 @@ public class FieldManager : MonoBehaviour
         
     }
 
-    public void CreatePlayerCharacter(Vector3 origin , string playerName)
+    public PlayerController CreatePlayerCharacter(Vector3 origin , string playerName)
     {
         // 위에서 레이를 쏴서 지형 높이에 따른 캐릭터 생성 코드
         origin.y += 100f;
@@ -43,7 +47,26 @@ public class FieldManager : MonoBehaviour
             {
                 GameObject player = GameObject.Instantiate<GameObject>(temPlayerChar,hit.point,Quaternion.identity);
                 _player = player.AddComponent<PlayerController>();
+                return _player;
             }
         }
+        return null;
+    }
+    public _Pet_01 CreatePet(Vector3 origin, string petName)
+    {
+        // 위에서 레이를 쏴서 지형 높이에 따른 캐릭터 생성 코드
+        origin.y += 100f;
+        RaycastHit hit;
+        if (Physics.Raycast(origin, -Vector3.up, out hit, Mathf.Infinity))
+        {
+            GameObject temPet = GameManager.Resource.GetPet(petName);
+            if (temPet != null)
+            {
+                GameObject pet = GameObject.Instantiate<GameObject>(temPet, hit.point, Quaternion.identity);
+                _pet = pet.AddComponent<_Pet_01>();
+                return _pet;
+            }
+        }
+        return null;
     }
 }
