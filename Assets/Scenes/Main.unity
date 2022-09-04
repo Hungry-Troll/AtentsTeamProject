@@ -2303,6 +2303,10 @@ PrefabInstance:
       value: island-small
       objectReference: {fileID: 0}
     - target: {fileID: 341819745930020914, guid: c1bdff3b2144293468204777e67985bf, type: 3}
+      propertyPath: m_TagString
+      value: Terrain
+      objectReference: {fileID: 0}
+    - target: {fileID: 341819745930020914, guid: c1bdff3b2144293468204777e67985bf, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}

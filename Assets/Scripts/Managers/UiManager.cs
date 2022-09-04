@@ -88,13 +88,13 @@ public class UiManager
         if(targetMonster != null)
         {
             // 가까이 있으면 공격한다.
-            if (distance < 2.0f)
+            if(distance < 2.0f)
             {
                 // 플레이어 컨트롤러에서 처리
                 GameManager.Obj._playerController._creatureState = CreatureState.Attack;
             }
             // 멀리 있으면 이동한다.
-            if (distance >= 2.0f)
+            if(distance >= 2.0f)
             {
                 // 플레이어 컨트롤러에서 처리
                 GameManager.Obj._playerController._creatureState = CreatureState.AutoMove;

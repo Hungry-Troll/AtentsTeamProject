@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         _anim.SetInteger("playerStat", 0);
         // 대기 중 이동
-        if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
+        if(GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
         {
             _creatureState = CreatureState.Move;
         }
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         transform.rotation = Quaternion.LookRotation(tempDir.normalized);
 
         // 일정거리이상 가까워지면 공격
-        if (distance < 2.0f)
+        if(distance < 2.0f)
         {
             _creatureState = CreatureState.Attack;
         }
@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
     private void Attack()
     {
-        if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputFalse)
+        if(GameManager.Ui._joyStickController._joystickState == JoystickState.InputFalse)
         {
             _anim.SetInteger("playerStat", 2);
             // 회전
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(tempDir.normalized);
         }
         // 공격 중 이동
-        if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
+        if(GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
         {
             _creatureState = CreatureState.Move;
         }
