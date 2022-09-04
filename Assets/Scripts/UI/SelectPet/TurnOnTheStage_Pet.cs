@@ -8,10 +8,17 @@ using UnityEngine.SceneManagement;
 
 public class TurnOnTheStage_Pet : MonoBehaviour
 {
+    // pet 애니메이션 담을 List
     private List<Animator> _animatorList;
+
+    // 각 펫 애니메이션
     public Animator _pet1Ani;
     public Animator _pet2Ani;
     public Animator _pet3Ani;
+
+    // 각 펫 설명 담을 배열
+    private GameObject[] _petInfoArr;
+
     private bool _bTurnLeft = false;
     private bool _bTurnRight = false;
     private Quaternion _turn = Quaternion.identity;
@@ -28,6 +35,8 @@ public class TurnOnTheStage_Pet : MonoBehaviour
         _animatorList.Add(_pet1Ani);
         _animatorList.Add(_pet2Ani);
         _animatorList.Add(_pet3Ani);
+
+        _petInfoArr = GameObject.FindGameObjectsWithTag("Pet_Info");
     }
 
     private void Start()
@@ -48,16 +57,6 @@ public class TurnOnTheStage_Pet : MonoBehaviour
             if(_characterNum == 3)
             {
                 _characterNum = 0;
-            }
-
-            // 선택한 펫만 움직이도록 나머지는 애니메이션 off
-            for(int i = 0; i < _animatorList.Count; i++)
-            {
-                if(i == _characterNum)
-                {
-                    continue;
-                }
-                // todo
             }
 
             // 수정 -> 120
@@ -92,6 +91,20 @@ public class TurnOnTheStage_Pet : MonoBehaviour
         
         // 돌립니다.
         transform.rotation = Quaternion.Slerp(transform.rotation, _turn, Time.deltaTime * 5.0f);
+
+        // 선택한 펫만 움직이도록 나머지는 애니메이션 off
+        // 선택한 펫 정보만 나오도록 SetActive
+        Debug.Log(_petInfoArr.Length);
+        for (int i = 0; i < _animatorList.Count; i++)
+        {
+            _petInfoArr[i].SetActive(false);
+            if (i == _characterNum)
+            {
+                _petInfoArr[i].SetActive(true);
+                continue;
+            }
+            // todo
+        }
     }
 
     public void TurnLeft()
