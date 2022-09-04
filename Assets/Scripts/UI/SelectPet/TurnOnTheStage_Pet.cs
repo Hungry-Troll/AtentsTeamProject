@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class TurnOnTheStage_Pet : MonoBehaviour
 {
     // pet 애니메이션 담을 List
-    private List<Animator> _animatorList;
+    //private List<Animator> _animatorList;
+    private Animator[] _animatorList;
 
     // 각 펫 애니메이션
     public Animator _pet1Ani;
@@ -29,12 +30,14 @@ public class TurnOnTheStage_Pet : MonoBehaviour
 
     private void Awake()
     {
-        _animatorList = new List<Animator>();
+        // 애니메이터 리스트, 애니메이터 초기화
+        //_animatorList = new List<Animator>();
+        _animatorList = new Animator[3];
 
         // 애니메이터 리스트에 펫 애니메이터 각각 추가
-        _animatorList.Add(_pet1Ani);
-        _animatorList.Add(_pet2Ani);
-        _animatorList.Add(_pet3Ani);
+        _animatorList[0] = _pet1Ani;
+        _animatorList[1] = _pet2Ani;
+        _animatorList[2] = _pet3Ani;
 
         _petInfoArr = GameObject.FindGameObjectsWithTag("Pet_Info");
     }
@@ -94,16 +97,24 @@ public class TurnOnTheStage_Pet : MonoBehaviour
 
         // 선택한 펫만 움직이도록 나머지는 애니메이션 off
         // 선택한 펫 정보만 나오도록 SetActive
-        Debug.Log(_petInfoArr.Length);
-        for (int i = 0; i < _animatorList.Count; i++)
+        for (int i = 0; i < _animatorList.Length; i++)
         {
+            // 선택 x 펫들은 active false
             _petInfoArr[i].SetActive(false);
+
+            // 선택 x 펫들 애니메이션 x
+            _animatorList[i].SetInteger("state", 0);
+
             if (i == _characterNum)
             {
+                Debug.Log(_animatorList[i].name);
+
+                // 선택된 펫은 active true
                 _petInfoArr[i].SetActive(true);
-                continue;
+
+                // 선택된 펫 애니메이션 Idle 상태로 전환
+                _animatorList[i].SetInteger("state", 1);
             }
-            // todo
         }
     }
 

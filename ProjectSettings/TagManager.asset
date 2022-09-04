@@ -7,6 +7,7 @@ TagManager:
   - Terrain
   - Monster
   - Pet_Info
+  - Pet
   layers:
   - Default
   - TransparentFX

@@ -819,11 +819,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stegosaurus_Green
       objectReference: {fileID: 0}
+    - target: {fileID: 2863366725767786345, guid: b38f339d8015df04794b398bae8dfcd4, type: 3}
+      propertyPath: m_TagString
+      value: Pet
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b38f339d8015df04794b398bae8dfcd4, type: 3}
 --- !u!4 &389041216 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2857776268887182179, guid: b38f339d8015df04794b398bae8dfcd4, type: 3}
+  m_PrefabInstance: {fileID: 389041215}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &389041217 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2804299365965604983, guid: b38f339d8015df04794b398bae8dfcd4, type: 3}
   m_PrefabInstance: {fileID: 389041215}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &447292758
@@ -836,6 +845,10 @@ PrefabInstance:
     - target: {fileID: 8514584188228749714, guid: 2d16a240ca268b04888a2cfe2f1afa44, type: 3}
       propertyPath: m_Name
       value: Pachycephalosaurus
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514584188228749714, guid: 2d16a240ca268b04888a2cfe2f1afa44, type: 3}
+      propertyPath: m_TagString
+      value: Pet
       objectReference: {fileID: 0}
     - target: {fileID: 8514584188229244402, guid: 2d16a240ca268b04888a2cfe2f1afa44, type: 3}
       propertyPath: m_RootOrder
@@ -1661,9 +1674,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cc5fd9ac85cc64fbe6564a28b775c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pet1Ani: {fileID: 0}
-  _pet2Ani: {fileID: 0}
-  _pet3Ani: {fileID: 0}
+  _pet1Ani: {fileID: 1473816556}
+  _pet2Ani: {fileID: 1170943188}
+  _pet3Ani: {fileID: 389041217}
 --- !u!1 &1100706172
 GameObject:
   m_ObjectHideFlags: 0
@@ -1982,6 +1995,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011243330022, guid: e8cee43cb2a02409b993b449980fadde, type: 3}
   m_PrefabInstance: {fileID: 1129091690}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1170943188 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8514584188221471276, guid: 2d16a240ca268b04888a2cfe2f1afa44, type: 3}
+  m_PrefabInstance: {fileID: 447292758}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1208052768
 GameObject:
@@ -2552,6 +2570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Velociraptor
       objectReference: {fileID: 0}
+    - target: {fileID: 8349749343405507207, guid: fccfabc68fef05546aef2b6b4ecd9672, type: 3}
+      propertyPath: m_TagString
+      value: Pet
+      objectReference: {fileID: 0}
     - target: {fileID: 8356141754252458905, guid: fccfabc68fef05546aef2b6b4ecd9672, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -2601,6 +2623,11 @@ PrefabInstance:
 --- !u!4 &1473816555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8356141754252458905, guid: fccfabc68fef05546aef2b6b4ecd9672, type: 3}
+  m_PrefabInstance: {fileID: 1473816554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1473816556 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8265584904067833501, guid: fccfabc68fef05546aef2b6b4ecd9672, type: 3}
   m_PrefabInstance: {fileID: 1473816554}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1552610984
