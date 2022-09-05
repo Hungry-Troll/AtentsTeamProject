@@ -205,7 +205,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 9.242, y: -116.214, z: 2.728}
 --- !u!1001 &124529602
 PrefabInstance:
@@ -462,7 +462,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &568826635
 Rigidbody:
@@ -511,7 +511,7 @@ Transform:
   - {fileID: 1144996686}
   - {fileID: 1859896693}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &826617561
 GameObject:
@@ -605,7 +605,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &1114094069
 PrefabInstance:
@@ -768,7 +768,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1829878339
 GameObject:
@@ -970,11 +970,8 @@ Transform:
   m_Children:
   - {fileID: 1829878340}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1001 &4031408387574108231
-=======
 --- !u!114 &2007132482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -989,13 +986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   rotSpeed: 20
---- !u!1 &4020983980424716568 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8510173815414595142, guid: cc3d3853c17614a469c70c178d48bb78, type: 3}
-  m_PrefabInstance: {fileID: 4744351301580521310}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4744351301580521310
->>>>>>> origin/whale
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1053,48 +1044,6 @@ PrefabInstance:
     - target: {fileID: 6743273244652958110, guid: a87d20dd76d7f0d41a7cc2dfe3157002, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 2007132477}
+      objectReference: {fileID: 2007132481}
     m_RemovedComponents: []
-<<<<<<< HEAD
   m_SourcePrefab: {fileID: 100100000, guid: a87d20dd76d7f0d41a7cc2dfe3157002, type: 3}
-=======
-  m_SourcePrefab: {fileID: 100100000, guid: cc3d3853c17614a469c70c178d48bb78, type: 3}
---- !u!114 &7666986769120616921
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4020983980424716568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 363835fd0fb9df84181d126b5bd50a1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotSpeed: 20
-  player: {fileID: 2007132481}
-  isChase: 0
---- !u!195 &7666986769120616924
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4020983980424716568}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
->>>>>>> origin/whale
