@@ -7,17 +7,26 @@ public class Define
     public enum CreatureState
     {
         Idle,
-        Moving,
+        Move,
+        AutoMove,
         Skill,
         Attack,
         Dead,
         None,
     }
-
     public enum JoystickState
     {
         InputFalse,
         InputTrue,
+    }
+
+    public enum SceneAttackButton
+    {
+        Attack,
+        Skill1,
+        Skill2,
+        Skill3,
+        Rolling,
     }
 
     public enum Info

@@ -22,11 +22,4 @@ public class InventoryController : MonoBehaviour, IDragHandler, IBeginDragHandle
         // 인벤토리 닫기 Ui는 Ui매니저에서 관리함
         GameManager.Ui.InventoryClose();
     }
-
-    public void OpenInventory()
-    {
-        // 인벤토리 열기 Ui는 Ui매니저에서 관리함
-        GameManager.Ui.InventoryOpen();
-    }
-
 }
