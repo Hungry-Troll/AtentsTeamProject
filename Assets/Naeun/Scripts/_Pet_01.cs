@@ -27,7 +27,9 @@ public class _Pet_01 : MonoBehaviour
     void Start()
     {
         target = GameObject.FindGameObjectWithTag("Monster").transform;
-        //player = GameObject.Find("Player").transform; 
+        // 플레이어 정보는 게임매니저 오브젝트 매니저에서 스크립트 타입으로 들고있음.
+        PlayerController playerController = GameManager.Obj._playerController;
+        player = playerController.transform;
     }
 
     void ChaseStart()
