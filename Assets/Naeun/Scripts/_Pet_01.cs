@@ -1,83 +1,91 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class _Pet_01 : MonoBehaviour
 {
 
     Animator animator;                                          
-    Vector3 targetPos;                                          
+    //Vector3 targetPos;
+    //
     public float moveSpeed;                                      
     public float rotSpeed;
     Transform target;
     float distance;
 
-    public GameObject player; 
+    public Transform player;
+    NavMeshAgent nav;
+    public bool isChase;
+    void Awake()
+    {
+        nav = GetComponent<NavMeshAgent>();
+        animator = GetComponent<Animator>();
 
-
-
+        Invoke("ChaseStart", 1);
+    }
     void Start()
     {
-        animator = GetComponent<Animator>();
         target = GameObject.FindGameObjectWithTag("Monster").transform;
+        //player = GameObject.Find("Player").transform; 
+    }
+
+    void ChaseStart()
+    {
+        isChase = true;
         
     }
-
-
     void Update()
     {
-       
-
-        if (Input.GetMouseButtonDown(0))                            
+        if (isChase)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitInfo;
-            if (Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
-            {
-                if (hitInfo.collider.CompareTag("Terrain"))
-                {
-                    targetPos = hitInfo.point;
-                }
-            }
-        }
-
-        Debug.Log($"{targetPos} // {transform.position}");
-
-        distance = Vector3.Distance(target.transform.position, targetPos);
-        Debug.Log(distance);
-
-        Vector3 dis = target.transform.position - targetPos;
-        Debug.Log(dis);
-
-        //애니메이션 코드
-        if (distance <= 3f)
-        {
-            Debug.Log("공격");
-            transform.LookAt(target.transform);
-            animator.SetInteger("aniIndex", 2);
-        }
-        else if (targetPos == transform.position)
-        {
-            animator.SetInteger("aniIndex", 0);
-        }
-        else if (targetPos != transform.position)
-        {
-            animator.SetInteger("aniIndex", 1);
+            Vector3 movePos = player.transform.position - (new Vector3(-2, 0, 2));
             
+            Debug.Log($"{movePos} // {transform.position}");
+
+            float disdis = Vector3.Distance(transform.position, movePos);
+            Debug.Log(disdis);
+
+            distance = Vector3.Distance(target.transform.position, movePos);
+            Debug.Log(distance);
+
+            if (distance <= 3f)
+            {
+                Debug.Log("공격");
+                transform.LookAt(target.transform);
+                animator.SetInteger("aniIndex", 2);
+            }else if (transform.position == movePos || disdis < 0.8f )
+            {
+                animator.SetInteger("aniIndex", 0);
+                transform.LookAt(player);
+            }
+            else
+            {
+                animator.SetInteger("aniIndex", 1);
+                nav.SetDestination(movePos);
+
+                //Vector3 rot = nav.steeringTarget - movePos;
+                //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(rot), Time.deltaTime * rotSpeed);
+
+                transform.LookAt(player);
+
+
+            }
+
         }
 
-        //이동코드 
-        transform.position = Vector3.MoveTowards(transform.position, targetPos, Time.deltaTime * moveSpeed);          
+        if (Input.GetKeyDown(KeyCode.Space))
+        {  
+            //animator.SetBool("isDead", true);
+            animator.SetTrigger("isDead");
 
-        // 회전코드 
-        Vector3 dir = targetPos - transform.position;                                       
-        Vector3 newDir = Vector3.RotateTowards(transform.forward, dir.normalized, Time.deltaTime * rotSpeed, 0);
-        transform.rotation = Quaternion.LookRotation(newDir.normalized);                   
-
-    }
-
-    void FollowPlayer()
-    {
+            isChase =false;
+            nav.enabled = false;
+            //gameObject.SetActive(false);
+            Destroy(this.gameObject, 2f);
+        }
 
     }
+
+
 }
