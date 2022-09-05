@@ -7,6 +7,9 @@ EditorUserSettings:
   m_ConfigSettings:
     RecentlyUsedSceneGuid-0:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
       value: 5506030450020c085f0d0f7613745d4444154c28787c27692c7e4c66e3e36168
       flags: 0
     RecentlyUsedSceneGuid-1:
@@ -36,6 +39,7 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-9:
       value: 5105550251530a5d5c0f5424117a5d44401541292d7e70357f281e64b6b8633a
       flags: 0
+<<<<<<< HEAD
 =======
       value: 5404575e00575a0a5d5c5b2447770d44144f402f2a7a74612b2f1964b1b2366d
       flags: 0
@@ -43,6 +47,8 @@ EditorUserSettings:
       value: 00500652010d5d025f570f734721074443154e7b2e2c27667a284e65b4b7676b
       flags: 0
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     x: 736.6667
     y: 0
     width: 522.6667
@@ -58,6 +61,7 @@ MonoBehaviour:
   m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 23}
+<<<<<<< HEAD
 =======
     x: 0
     y: 0
@@ -69,6 +73,8 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 16}
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &3
@@ -209,6 +215,9 @@ MonoBehaviour:
     x: 732
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     width: 204
     height: 504.66666
   m_MinSize: {x: 200, y: 200}
@@ -216,6 +225,7 @@ MonoBehaviour:
   m_ActualView: {fileID: 20}
   m_Panes:
   - {fileID: 20}
+<<<<<<< HEAD
 =======
     width: 804
     height: 142.79999
@@ -225,6 +235,8 @@ MonoBehaviour:
   m_Panes:
   - {fileID: 17}
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &8
@@ -293,6 +305,9 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     width: 1706.6667
     height: 976
 =======
@@ -327,10 +342,14 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 1706.6667
 =======
     width: 1536
 >>>>>>> origin/Yongseon
+=======
+    width: 1706.6667
+>>>>>>> origin/whale
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -421,12 +440,16 @@ MonoBehaviour:
     x: 0
     y: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     width: 1259.3334
     height: 926
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
   controlID: 164
+<<<<<<< HEAD
 =======
     width: 725.6
     height: 588
@@ -487,6 +510,8 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -514,6 +539,7 @@ MonoBehaviour:
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
   controlID: 165
+<<<<<<< HEAD
 =======
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
@@ -533,6 +559,8 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -553,6 +581,9 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     x: 204
     y: 0
     width: 735.3333
@@ -663,6 +694,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 12141, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MinSize: {x: 300, y: 360}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_TitleContent:
+    m_Text: Navigation
+    m_Image: {fileID: 1087843850482249999, guid: 0000000000000000d000000000000000, type: 0}
+    m_Tooltip: 
+  m_Pos:
+    serializedVersion: 2
+    x: 1259.3334
+    y: 72.66667
+    width: 446.33337
+    height: 905
+  m_ViewDataDictionary: {fileID: 0}
+  m_OverlayCanvas:
+    m_LastAppliedPresetName: Default
+    m_SaveData: []
+--- !u!114 &16
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 12914, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -679,6 +738,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     x: 204
     y: 72.66667
     width: 733.3333
@@ -711,6 +773,7 @@ MonoBehaviour:
       e11: 0.42256412
       e12: 0
       e13: 82.88718
+<<<<<<< HEAD
 =======
     - {fileID: -4093582092557795699, guid: 467ff1a84af80254baacf40a4a84640a, type: 2}
     - {fileID: 2921161210438173651, guid: 6cdeaebfe73a4e74faa7ac4110fa1b6e, type: 2}
@@ -724,6 +787,8 @@ MonoBehaviour:
       e12: 0
       e13: 9.08889
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
       e20: 0
       e21: 0
       e22: 1
@@ -733,6 +798,9 @@ MonoBehaviour:
       e32: 0
       e33: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     - e00: 0.56563574
       e01: 0
       e02: 0
@@ -805,6 +873,7 @@ MonoBehaviour:
       e11: 0.6329825
       e12: 0
       e13: 162.2
+<<<<<<< HEAD
 =======
     - e00: 0.35466665
       e01: 0
@@ -815,6 +884,8 @@ MonoBehaviour:
       e12: 0
       e13: 7.906666
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
       e20: 0
       e21: 0
       e22: 1
@@ -846,10 +917,14 @@ MonoBehaviour:
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &17
 =======
 --- !u!114 &18
 >>>>>>> origin/Yongseon
+=======
+--- !u!114 &17
+>>>>>>> origin/whale
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -896,6 +971,7 @@ MonoBehaviour:
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
     m_SaveData: []
+<<<<<<< HEAD
 <<<<<<< HEAD
 --- !u!114 &18
 =======
@@ -971,6 +1047,9 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
 --- !u!114 &20
 >>>>>>> origin/Yongseon
+=======
+--- !u!114 &18
+>>>>>>> origin/whale
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1023,6 +1102,9 @@ MonoBehaviour:
     m_SearchArea: 1
     m_Folders:
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     - Assets/Fox/Animations
     m_Globs: []
     m_OriginalText: 
@@ -1067,6 +1149,7 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
     m_ExpandedIDs: 0000000030600000326000003460000036600000386000003a6000003c6000003e60000040600000426000004460000046600000486000004a6000004c6000004e6000005060000052600000546000005660000058600000
+<<<<<<< HEAD
 =======
     - Assets/Ju Yongseon/UiDesign3
     m_Globs: []
@@ -1085,6 +1168,8 @@ MonoBehaviour:
     m_LastClickedID: 24740
     m_ExpandedIDs: 00000000285b00002a5b00002c5b00002e5b0000305b0000
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1114,6 +1199,7 @@ MonoBehaviour:
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004ebe010084ba01001aaf010030bf01003cb7010094ae0100fab3010088b8010054ad01002ab40100ccae010094b1010048c10100d6c0010058b5010082ad010012bf010042b00100b0af0100e4b601007ead0100c2c2010012b601004eb101004ab30100cac502000ec60200eec502001ac6020006c60200c0a50000c6a50000dea500000e7000004a6e0000
+<<<<<<< HEAD
 =======
   m_AssetTreeState:
     scrollPos: {x: 0, y: 0}
@@ -1121,6 +1207,8 @@ MonoBehaviour:
     m_LastClickedID: 0
     m_ExpandedIDs: ffffffff00000000285b00002a5b00002c5b0000305b0000
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1182,10 +1270,13 @@ MonoBehaviour:
 <<<<<<< HEAD
   m_DirectoriesAreaWidth: 243.33333
 --- !u!114 &19
+<<<<<<< HEAD
 =======
   m_DirectoriesAreaWidth: 115
 --- !u!114 &21
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1291,6 +1382,7 @@ MonoBehaviour:
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 4c969a2b90040154d917609493e03593
 --- !u!114 &21
+<<<<<<< HEAD
 =======
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -1358,6 +1450,8 @@ MonoBehaviour:
   m_RenderTexture: {fileID: 0}
 --- !u!114 &22
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1382,16 +1476,22 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
     x: 204
     y: 72.66667
     width: 733.3333
     height: 483.66666
+<<<<<<< HEAD
 =======
     x: 0
     y: 73.6
     width: 724.6
     height: 280.6
 >>>>>>> origin/Yongseon
+=======
+>>>>>>> origin/whale
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
     m_LastAppliedPresetName: Default
@@ -1598,6 +1698,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_Position:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 4.2, y: 6.7, z: 13.1}
     speed: 2
     m_Value: {x: 4.2, y: 6.7, z: 13.1}
@@ -1606,6 +1707,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -257.125, y: 446.5, z: 0}
 >>>>>>> origin/Yongseon
+=======
+    m_Target: {x: 4.2, y: 6.7, z: 13.1}
+    speed: 2
+    m_Value: {x: 4.2, y: 6.7, z: 13.1}
+>>>>>>> origin/whale
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1657,6 +1763,7 @@ MonoBehaviour:
     m_Value: {x: -0.049480706, y: 0.9308639, z: -0.3348514, w: -0.13754469}
   m_Size:
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 9.942822
     speed: 2
     m_Value: 9.942822
@@ -1665,6 +1772,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 456.63
 >>>>>>> origin/Yongseon
+=======
+    m_Target: 9.942822
+    speed: 2
+    m_Value: 9.942822
+>>>>>>> origin/whale
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1690,6 +1802,9 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/whale
 --- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
