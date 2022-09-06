@@ -5,6 +5,30 @@ using UnityEngine.EventSystems;
 
 public class InventoryController : MonoBehaviour, IDragHandler, IBeginDragHandler
 {
+    // 인벤토리 아이템
+    public List<GameObject> _item = new List<GameObject>();
+
+    // 인벤토리 슬롯배열
+    public InvenSlotController[] _invenSlotArray;
+
+    // 인벤토리 슬롯 배열을 리스트로 변환
+    public List<InvenSlotController> _invenSlotList = new List<InvenSlotController>();
+    private void Start()
+    {
+/*        // 인벤토리 슬롯을 배열로 가지고옴
+        _invenSlotArray = GetComponentsInChildren<InvenSlotController>();
+        // 가지고 온 배열을 리스트로 변환
+        foreach (InvenSlotController one in _invenSlotArray)
+        {
+            _invenSlotList.Add(one);
+        }*/
+    }
+
+    private void LateUpdate()
+    {
+        
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         // 드래그 시작

@@ -8,6 +8,7 @@ TagManager:
   - Monster
   - Pet_Info
   - Pet
+  - Item
   layers:
   - Default
   - TransparentFX

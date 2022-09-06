@@ -43,17 +43,17 @@ public class _Pet_01 : MonoBehaviour
         {
             Vector3 movePos = player.transform.position - (new Vector3(-2, 0, 2));
             
-            Debug.Log($"{movePos} // {transform.position}");
+            //Debug.Log($"{movePos} // {transform.position}");
 
             float disdis = Vector3.Distance(transform.position, movePos);
-            Debug.Log(disdis);
+            //Debug.Log(disdis);
 
             distance = Vector3.Distance(target.transform.position, movePos);
-            Debug.Log(distance);
+            //Debug.Log(distance);
 
             if (distance <= 3f)
             {
-                Debug.Log("공격");
+                //Debug.Log("공격");
                 transform.LookAt(target.transform);
                 animator.SetInteger("aniIndex", 2);
             }else if (transform.position == movePos || disdis < 0.8f )
