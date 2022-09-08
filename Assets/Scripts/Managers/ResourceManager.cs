@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ResourceManager 
 {
@@ -9,6 +10,7 @@ public class ResourceManager
     public List<GameObject> _pet;
     public List<GameObject> _npc;
     public List<GameObject> _ui;
+    public List<Sprite> _itemImage;
 
     // Start is called before the first frame update
     public void Init()
@@ -18,30 +20,39 @@ public class ResourceManager
         _pet = new List<GameObject>();
         _npc = new List<GameObject>();
         _ui = new List<GameObject>();
+        _itemImage = new List<Sprite>();
 
         GameObject[] player = Resources.LoadAll<GameObject>("Prefabs/Character_Prefab/");
         GameObject[] monster = Resources.LoadAll<GameObject>("Prefabs/Monster_Prefab/");
         GameObject[] pet = Resources.LoadAll<GameObject>("Prefabs/Pet_Prefab/");
         GameObject[] npc = Resources.LoadAll<GameObject>("Prefabs/Npc_Prefab/");
         GameObject[] ui = Resources.LoadAll<GameObject>("Prefabs/Ui_Prefab/");
+        Sprite[] itemImage = Resources.LoadAll<Sprite>("Resource/Image/ItemImage");
 
         ListAdd(_player, player);
         ListAdd(_monster, monster);
         ListAdd(_pet, pet);
         ListAdd(_npc, npc);
         ListAdd(_ui, ui);
+        ListAddImage(_itemImage, itemImage);
     }
-
+    public void ListAddImage(List<Sprite> images, Sprite[] loadListImage)
+    {
+        foreach(Sprite one in loadListImage)
+        {
+            images.Add(one);
+        }
+    }
     public void ListAdd(List<GameObject> go, GameObject[] loadList)
     {
-        foreach (GameObject one in loadList)
+        foreach(GameObject one in loadList)
         {
             go.Add(one);
         }
     }
     public GameObject GetCharacter(string playerName)
     {
-        foreach (GameObject one in _player)
+        foreach(GameObject one in _player)
         {
             if (one.name.Equals(playerName))
             {
@@ -52,7 +63,7 @@ public class ResourceManager
     }
     public GameObject GetMonster(string monsterName)
     {
-        foreach (GameObject one in _monster)
+        foreach(GameObject one in _monster)
         {
             if (one.name.Equals(monsterName))
             {
@@ -63,7 +74,7 @@ public class ResourceManager
     }
     public GameObject GetPet(string petName)
     {
-        foreach (GameObject one in _pet)
+        foreach(GameObject one in _pet)
         {
             if (one.name.Equals(petName))
             {
@@ -74,7 +85,7 @@ public class ResourceManager
     }
     public GameObject GetNpc(string npcName)
     {
-        foreach (GameObject one in _npc)
+        foreach(GameObject one in _npc)
         {
             if (one.name.Equals(npcName))
             {
@@ -85,9 +96,20 @@ public class ResourceManager
     }
     public GameObject GetUi(string uiName)
     {
-        foreach (GameObject one in _ui)
+        foreach(GameObject one in _ui)
         {
             if (one.name.Equals(uiName))
+            {
+                return one;
+            }
+        }
+        return null;
+    }
+    public Sprite GetImage(string imageName)
+    {
+        foreach (Sprite one in _itemImage)
+        {
+            if (one.name.Equals(imageName))
             {
                 return one;
             }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class Define
 {
+    public enum ItemType
+    {
+        Equipment,
+        Consumables,
+    }
     public enum CreatureState
     {
         Idle,

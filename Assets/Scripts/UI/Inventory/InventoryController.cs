@@ -15,18 +15,7 @@ public class InventoryController : MonoBehaviour, IDragHandler, IBeginDragHandle
     public List<InvenSlotController> _invenSlotList = new List<InvenSlotController>();
     private void Start()
     {
-/*        // 인벤토리 슬롯을 배열로 가지고옴
-        _invenSlotArray = GetComponentsInChildren<InvenSlotController>();
-        // 가지고 온 배열을 리스트로 변환
-        foreach (InvenSlotController one in _invenSlotArray)
-        {
-            _invenSlotList.Add(one);
-        }*/
-    }
 
-    private void LateUpdate()
-    {
-        
     }
 
     public void OnBeginDrag(PointerEventData eventData)

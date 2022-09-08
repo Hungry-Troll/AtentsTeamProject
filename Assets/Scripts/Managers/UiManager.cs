@@ -31,6 +31,10 @@ public class UiManager
         GameObject go = new GameObject();
         go.name = "@UI_Root";
 
+        ////////////////////////////////
+        /// 반복되는 내용 나중에 함수로 정리
+        ////////////////////////////////
+        ///
         // 시작하면 HpMp바 씬에 불러옴
         GameObject hpMpBar = GameManager.Resource.GetUi("Ui_HpMpBar");
         _hpMpBar = GameObject.Instantiate<GameObject>(hpMpBar);
