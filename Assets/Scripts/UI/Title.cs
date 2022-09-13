@@ -5,6 +5,10 @@ using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
 public class Title : MonoBehaviour
 
+<<<<<<< HEAD
+=======
+public class Title : MonoBehaviour
+>>>>>>> origin/TeamProject
 {
     public GameObject Option;
     
