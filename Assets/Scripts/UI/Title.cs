@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.SceneManagement;
+public class Title : MonoBehaviour
 
-public class StartButton : MonoBehaviour
 {
     public GameObject Option;
     
