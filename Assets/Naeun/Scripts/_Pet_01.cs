@@ -47,8 +47,10 @@ public class _Pet_01 : MonoBehaviour
 
             float disdis = Vector3.Distance(transform.position, movePos);
             //Debug.Log(disdis);
-
-            distance = Vector3.Distance(target.transform.position, movePos);
+            if(target != null)
+            {
+                distance = Vector3.Distance(target.transform.position, movePos);
+            }
             //Debug.Log(distance);
 
             if (distance <= 3f)

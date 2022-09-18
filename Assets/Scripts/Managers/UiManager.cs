@@ -15,6 +15,9 @@ public class UiManager
     public JoyStickController _joyStickController;
     public GameObject _joyStick;
 
+    // 상태창에 보이는 플레이어
+    public GameObject _statePlayerObj;
+
     // 인벤토리
     public InventoryController _inventoryController;
     public GameObject _inven;
@@ -50,6 +53,10 @@ public class UiManager
         _joyStick = GameObject.Instantiate<GameObject>(joystick);
         _joyStickController = _joyStick.GetComponentInChildren<JoyStickController>();
         _joyStick.transform.SetParent(go.transform);
+
+        // 시작하면 상태창에 보이는 플레이어 불러옴, 상태창은 인벤토리와 세트
+        GameObject statePlayerObj = GameManager.Resource.GetCharacter("tempPlayer");
+        _statePlayerObj = GameObject.Instantiate<GameObject>(statePlayerObj, new Vector3(0,200,0), Quaternion.identity);
 
         // 시작하면 인벤토리버튼(가방아이콘) 씬에 불러옴
         GameObject invenButton = GameManager.Resource.GetUi("Ui_SceneInventoryButton");

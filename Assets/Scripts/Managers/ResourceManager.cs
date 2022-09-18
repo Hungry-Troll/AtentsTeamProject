@@ -9,7 +9,9 @@ public class ResourceManager
     public List<GameObject> _monster;
     public List<GameObject> _pet;
     public List<GameObject> _npc;
+    public List<GameObject> _fieldItem;
     public List<GameObject> _ui;
+    public List<GameObject> _camera;
     public List<Sprite> _itemImage;
 
     // Start is called before the first frame update
@@ -19,21 +21,27 @@ public class ResourceManager
         _monster = new List<GameObject>();
         _pet = new List<GameObject>();
         _npc = new List<GameObject>();
+        _fieldItem = new List<GameObject>();
         _ui = new List<GameObject>();
+        _camera = new List<GameObject>();
         _itemImage = new List<Sprite>();
 
         GameObject[] player = Resources.LoadAll<GameObject>("Prefabs/Character_Prefab/");
         GameObject[] monster = Resources.LoadAll<GameObject>("Prefabs/Monster_Prefab/");
         GameObject[] pet = Resources.LoadAll<GameObject>("Prefabs/Pet_Prefab/");
         GameObject[] npc = Resources.LoadAll<GameObject>("Prefabs/Npc_Prefab/");
+        GameObject[] fieldItem = Resources.LoadAll<GameObject>("Prefabs/Item_Prefab/");
         GameObject[] ui = Resources.LoadAll<GameObject>("Prefabs/Ui_Prefab/");
+        GameObject[] camera = Resources.LoadAll<GameObject>("Prefabs/Camera_Prefab/");
         Sprite[] itemImage = Resources.LoadAll<Sprite>("Resource/Image/ItemImage");
 
         ListAdd(_player, player);
         ListAdd(_monster, monster);
         ListAdd(_pet, pet);
         ListAdd(_npc, npc);
+        ListAdd(_fieldItem, fieldItem);
         ListAdd(_ui, ui);
+        ListAdd(_camera, camera);
         ListAddImage(_itemImage, itemImage);
     }
     public void ListAddImage(List<Sprite> images, Sprite[] loadListImage)
@@ -94,11 +102,33 @@ public class ResourceManager
         }
         return null;
     }
+    public GameObject GetfieldItem(string fieldItemName)
+    {
+        foreach (GameObject one in _fieldItem)
+        {
+            if (one.name.Equals(fieldItemName))
+            {
+                return one;
+            }
+        }
+        return null;
+    }
     public GameObject GetUi(string uiName)
     {
         foreach(GameObject one in _ui)
         {
             if (one.name.Equals(uiName))
+            {
+                return one;
+            }
+        }
+        return null;
+    }
+    public GameObject GetCamera(string cameraName)
+    {
+        foreach (GameObject one in _camera)
+        {
+            if (one.name.Equals(cameraName))
             {
                 return one;
             }

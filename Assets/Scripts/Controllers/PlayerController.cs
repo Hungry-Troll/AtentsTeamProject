@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             _anim.SetInteger("playerStat", 1);
             // ¿Ãµø
-            float x = _inputDir.x;
+            float x =_inputDir.x;
             float y =_inputDir.y;
             Vector3 tempVector = new Vector3(x, 0, y);
             tempVector = tempVector * Time.deltaTime * _moveSpeed;
