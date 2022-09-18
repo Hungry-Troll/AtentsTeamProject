@@ -5,22 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/Title.unity
-    guid: 80a79b3f92f90b541b93f5b4a6d5ca57
-  - enabled: 1
-    path: Assets/Scenes/CharacterSelectScene.unity
-    guid: 27ac924de2cebdd43bc9fa97f415df02
+  - enabled: 0
+    path: Assets/Scenes/Title1.unity
+    guid: a61bc7dbacb5afb40b0340436c42b168
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/LoadingScene.unity
-    guid: 54ab90946046f1541814e61c2451d7fe
+    path: Assets/Scenes/CharacterSelectScene.unity
+    guid: 27ac924de2cebdd43bc9fa97f415df02
   - enabled: 1
     path: Assets/Scenes/SelectPet/SelectPet.unity
     guid: fbd951b3e8c61264f9a7a300595575e0
   - enabled: 1
+    path: Assets/Scenes/LoadingScene.unity
+    guid: 54ab90946046f1541814e61c2451d7fe
     path: Assets/Scenes/SelectPet/OnTheStage.unity
     guid: 84e619543505cf247b806f136c159de6
   - enabled: 0
