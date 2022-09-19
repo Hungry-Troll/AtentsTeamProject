@@ -6,5 +6,4 @@ public class ObjectManager
 {
     public PlayerController _playerController;
 
-
 }

@@ -71,6 +71,7 @@ MonoBehaviour:
   moveSpeed: 5
   rotSpeed: 20
   player: {fileID: 0}
+  isChase: 0
 --- !u!195 &2967425124910117394
 NavMeshAgent:
   m_ObjectHideFlags: 0

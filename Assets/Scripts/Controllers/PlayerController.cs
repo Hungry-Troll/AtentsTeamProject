@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         _moveSpeed = 2.5f;
         _creatureState = CreatureState.Idle;
         _anim = GetComponent<Animator>();
-         _autoMoveSpeed = _moveSpeed + 2.0f;
+        _autoMoveSpeed = _moveSpeed + 2.0f;
     }
 
     // Update is called once per frame
@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
         {
             _anim.SetInteger("playerStat", 1);
             // 이동
-            float x = _inputDir.x;
+            float x =_inputDir.x;
             float y =_inputDir.y;
             Vector3 tempVector = new Vector3(x, 0, y);
             tempVector = tempVector * Time.deltaTime * _moveSpeed;
@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(tempDir.normalized);
         }
         // 공격 중 이동
-        if(GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
+        if (GameManager.Ui._joyStickController._joystickState == JoystickState.InputTrue)
         {
             _creatureState = CreatureState.Move;
         }

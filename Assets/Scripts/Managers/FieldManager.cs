@@ -6,15 +6,19 @@ public class FieldManager : MonoBehaviour
 {
     //게임 시작시 Awake , Start, Update 사용 용도 매니저
     PlayerController _player;
-    Following _pet;
+    _Pet_01 _pet;
+    ItemController _item;
+
     public GameObject _startPosObject;
     public Vector3 _startPos;
 
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         // 게임매니저에서 Ui매니저 Init(Awake 함수 대체)
         // Ui 불러옴
         GameManager.Ui.Init();
+        GameManager.Cam.Init();
         // 플레이어 캐릭터 생성
         // 추후 플레이어 선택창에서 string 으로 이름만 받아오면 됨
         // 시작위치는 맵마다 다르게 해야 됨
@@ -22,11 +26,12 @@ public class FieldManager : MonoBehaviour
         //Obj매니저에서 플레이어스크립트를 들고있게함
         GameManager.Obj._playerController = CreatePlayerCharacter(_startPos, "player");
         CreatePet(_startPos, "Fox");
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        //아이템 생성용 테스트 코드
+        for (int i = 0; i < GameManager.Resource._fieldItem.Count; i++)
+        {
+            Vector3 tempPos = new Vector3(Random.Range(i, i + 3), Random.Range(i, i + 3), Random.Range(i, i + 3));
+            _item = CreateFieldItem(_player.transform.position + tempPos, GameManager.Resource._fieldItem[i].name);
+        }
     }
 
     // Update is called once per frame
@@ -34,7 +39,6 @@ public class FieldManager : MonoBehaviour
     {
         
     }
-
     public PlayerController CreatePlayerCharacter(Vector3 origin , string playerName)
     {
         // 위에서 레이를 쏴서 지형 높이에 따른 캐릭터 생성 코드
@@ -65,6 +69,25 @@ public class FieldManager : MonoBehaviour
                 GameObject pet = GameObject.Instantiate<GameObject>(temPet, hit.point, Quaternion.identity);
                 _pet = pet.AddComponent<Following>();
                 return _pet;
+            }
+        }
+        return null;
+    }
+    public ItemController CreateFieldItem(Vector3 origin, string fieldItemName)
+    {
+        // 위에서 레이를 쏴서 지형 높이에 따른 캐릭터 생성 코드
+        origin.y += 100f;
+        RaycastHit hit;
+        if (Physics.Raycast(origin, -Vector3.up, out hit, Mathf.Infinity))
+        {
+            GameObject temfieldItem = GameManager.Resource.GetfieldItem(fieldItemName);
+            if (temfieldItem != null)
+            {
+                string tempName = temfieldItem.name;
+                GameObject fieldItem = GameObject.Instantiate<GameObject>(temfieldItem, hit.point, Quaternion.identity);
+                _item = fieldItem.AddComponent<ItemController>();
+                _item.name = tempName;
+                return _item;
             }
         }
         return null;

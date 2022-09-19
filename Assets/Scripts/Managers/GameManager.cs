@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     SceneManagerEX _scene = new SceneManagerEX();
     UiManager _ui = new UiManager();
     ObjectManager _obj = new ObjectManager();
+    CameraManager _cam = new CameraManager();
     //
     public static ResourceManager Resource 
     { 
@@ -42,6 +43,10 @@ public class GameManager : MonoBehaviour
     public static ObjectManager Obj
     {
         get { return _instance._obj; }
+    }
+    public static CameraManager Cam
+    {
+        get { return _instance._cam; }
     }
     //
     // Start is called before the first frame update

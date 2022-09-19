@@ -15,9 +15,15 @@ public class UiManager
     public JoyStickController _joyStickController;
     public GameObject _joyStick;
 
+    // 상태창에 보이는 플레이어
+    public GameObject _statePlayerObj;
+
     // 인벤토리
     public InventoryController _inventoryController;
     public GameObject _inven;
+
+    // 인벤버튼
+    public GameObject _invenButton;
 
     // 공격 타겟 몬스터
     public GameObject targetMonster;
@@ -25,28 +31,53 @@ public class UiManager
     //Ui 관리는 여기에서 처리
     public void Init()
     {
+        GameObject go = new GameObject();
+        go.name = "@UI_Root";
+
+        ////////////////////////////////
+        /// 반복되는 내용 나중에 함수로 정리
+        ////////////////////////////////
+        ///
         // 시작하면 HpMp바 씬에 불러옴
         GameObject hpMpBar = GameManager.Resource.GetUi("Ui_HpMpBar");
         _hpMpBar = GameObject.Instantiate<GameObject>(hpMpBar);
+        _hpMpBar.transform.SetParent(go.transform);
 
         // 시작하면 씬 버튼(공격 스킬 버튼) 씬에 불러옴
         GameObject sceneButton = GameManager.Resource.GetUi("Ui_Scene_Button");
         _sceneButton = GameObject.Instantiate<GameObject>(sceneButton);
+        _sceneButton.transform.SetParent(go.transform);
 
         // 시작하면 조이스틱 씬에 불러옴
         GameObject joystick = GameManager.Resource.GetUi("Ui_JoystickController");
         _joyStick = GameObject.Instantiate<GameObject>(joystick);
-         _joyStickController = _joyStick.GetComponentInChildren<JoyStickController>();
+        _joyStickController = _joyStick.GetComponentInChildren<JoyStickController>();
+        _joyStick.transform.SetParent(go.transform);
+
+        // 시작하면 상태창에 보이는 플레이어 불러옴, 상태창은 인벤토리와 세트
+        GameObject statePlayerObj = GameManager.Resource.GetCharacter("tempPlayer");
+        _statePlayerObj = GameObject.Instantiate<GameObject>(statePlayerObj, new Vector3(0,200,0), Quaternion.identity);
 
         // 시작하면 인벤토리버튼(가방아이콘) 씬에 불러옴
         GameObject invenButton = GameManager.Resource.GetUi("Ui_SceneInventoryButton");
-        GameObject.Instantiate<GameObject>(invenButton);
+        _invenButton = GameObject.Instantiate<GameObject>(invenButton);
+        _invenButton.transform.SetParent(go.transform);
 
         // 시작하면 인벤토리를 미리 불러와서 우선 SetActive(false)로 함
         GameObject inven = GameManager.Resource.GetUi("Ui_Inventory");
         _inven = GameObject.Instantiate<GameObject>(inven);
         _inventoryController = _inven.GetComponentInChildren<InventoryController>();
+        _inven.transform.SetParent(go.transform);
         InventoryClose();
+
+        // 인벤토리 슬롯을 배열로 가지고옴 인벤토리 컨트롤러에서 하려고 했지만 SetActive(false)라  Start() 함수 사용이 안됨
+        _inventoryController._invenSlotArray = _inventoryController.GetComponentsInChildren<InvenSlotController>();
+        // 가지고 온 배열을 리스트로 변환
+        foreach (InvenSlotController one in _inventoryController._invenSlotArray)
+        {
+            _inventoryController._invenSlotList.Add(one);
+        }
+
     }
     /// <summary>
     /// 인벤토리 관련
