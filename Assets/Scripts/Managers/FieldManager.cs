@@ -6,7 +6,7 @@ public class FieldManager : MonoBehaviour
 {
     //게임 시작시 Awake , Start, Update 사용 용도 매니저
     PlayerController _player;
-    _Pet_01 _pet;
+    Following _pet;
     ItemController _item;
 
     public GameObject _startPosObject;
