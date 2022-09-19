@@ -60,3 +60,5 @@ sysinfo.txt
 crashlytics-build.properties
 
 .gitmessage.txt
+Packages/packages-lock.json
+ProjectSettings/ProjectVersion.txt
