@@ -40,21 +40,6 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void MasterControll(float sliderValue)
-    {
-        titleAudioMixer.SetFloat("Master", Mathf.Log10(sliderValue) * 20);
-    }
-
-    public void BGMControll(float sliderValue)
-    {
-        titleAudioMixer.SetFloat("BGM", Mathf.Log10(sliderValue) * 20);
-    }
-
-    public void SFXControll(float sliderValue)
-    {
-        titleAudioMixer.SetFloat("SFX", Mathf.Log10(sliderValue) * 20);
-    }
-
     public void SaveSoundSetting()
     {
         PlayerPrefs.SetFloat(BGMPref, BGMSlider.value);
